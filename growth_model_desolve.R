@@ -23,7 +23,7 @@ modgrowth <- function(
     Km  = Km,            # [g sucrose /g eau] ## 
     ps  = ps,            # [cm.h-1] Permeability of the composite membrane 
 
-# Parametres concernant la plasticité ---------------------------------------
+# Parametres concernant la plasticitÃ© ---------------------------------------
     phi0 = phi0,
     phiMax  = phiMax,      # [bar-1] 
     phiMin  = phiMin,      # [bar-1]
@@ -36,8 +36,8 @@ modgrowth <- function(
     yC0 = yC0,                 # [bar]   threshold value of turgor pressure for growth
     ymax =ymax,              # [bar]  Maxi threshold value of turgor pressure for growth
     ymin =ymin,              # [bar]  Mini threshold value of turgor pressure for growth
-    Tpsmax = Tpsmax,         # [jour] Tps en-deça duquel Y = Ymax
-    Tpsmin = Tpsmin,         # [jour] Tps au-delà duquel Y = Ymin
+    Tpsmax = Tpsmax,         # [jour] Tps en-deÃ§a duquel Y = Ymax
+    Tpsmin = Tpsmin,         # [jour] Tps au-delÃ  duquel Y = Ymin
 
 # Parametres concernant les flux d'eau --------------------------------------
     Hf    = Hf,	        # [%] Humidite relative dans le fruit
@@ -117,9 +117,9 @@ modgrowth <- function(
    calcuLx = calcuLx,            # [numeric] Calculate Lx or not
 
 # Matrice d'entree des conditions aux limites (5 colonnes) ------------------
-    DATA  = DATA      # [   h       °C      adim    bar     mMol sucre/l seve] 
+    DATA  = DATA      # [   h       Â°C      adim    bar     mMol sucre/l seve] 
 		          #   Heure Temperature  RH  Potentiel   Concentration
-		          #                           Xylème        Sucre
+		          #                           XylÃ¨me        Sucre
 		          #                                     dans le Phloeme
 )
 
@@ -129,7 +129,7 @@ modgrowth <- function(
 # describe the input funtions used for growth model #
 
  times <- DATA$Tps                 #[h]   
- Temp <- DATA$Temp                 #[°C] 
+ Temp <- DATA$Temp                 #[Â°C] 
  RH <- DATA$RH                     #[-]
  Cpm <- DATA$Cp                    #[mmol/L]
  WP <- DATA$PTLx                   #[bar]
@@ -244,7 +244,7 @@ calcuel,calcuSigmaP,calcussrat,calcuVmax)
 
      piF <- piF.suc + piF0                                     # [bar] PO fruit
 
-  # Caractéristiques plasticité -----------------------------
+  # CaractÃ©ristiques plasticitÃ© -----------------------------
      phi <- phi0
      if(calcuphi == T)
         { phi <- phiMin + ( phiMax - phiMin )/( 1 + exp( kPhi * (t-coefPhi ) ) )  }    # [bar-1.h-1]   Plasticite
@@ -252,7 +252,7 @@ calcuel,calcuSigmaP,calcussrat,calcuVmax)
   # Calculate fruit volume  -----------------------------
      vol <- W/Dw + Stot/Ds		                               # [cm3]  fruit volume
 
-  # Caractéristiques Reflexion membranaire ------------------
+  # CaractÃ©ristiques Reflexion membranaire ------------------
      sigmap <- switch(calcuSigmaP,
                        sigmaP0,                            #1
                        sigmaP0 - exp(-tauS *(t-t1)^2),      #2
@@ -262,7 +262,7 @@ calcuel,calcuSigmaP,calcussrat,calcuVmax)
      if(sigmap < 0) sigmap <- 0
       	                                          # [adim]  ReflexionMembranaire
   
-  # Caractéristiques conductance ----------------------------
+  # CaractÃ©ristiques conductance ----------------------------
      rho <- switch(calcuRho,
                        rho0,                                          #1
                        rhoMax*exp(-kRho*t/24)+rhoMin,                 #2
@@ -298,7 +298,7 @@ calcuel,calcuSigmaP,calcussrat,calcuVmax)
       pV <- pP
       Cs <- ifelse(max(Up,0),Cv,Css)   #(Css + Cv) * 0.5 
 
-  # Caractéristiques influx sucre ---------------------------
+  # CaractÃ©ristiques influx sucre ---------------------------
      nuM <- nuM0
      if(calcunuM == T)
         { nuM <- nuM_max/(1+exp(-nuM_tau*(t/24- nuM_t)))+ nuM_min }
@@ -389,7 +389,7 @@ calcuel,calcuSigmaP,calcussrat,calcuVmax)
 
                        }
 
-  # Caractéristiques elasticity  -----------------------------
+  # CaractÃ©ristiques elasticity  -----------------------------
      el  <- el0
      if(calcuel == T)
         {  

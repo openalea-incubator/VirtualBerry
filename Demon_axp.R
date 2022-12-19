@@ -1,5 +1,5 @@
 getwd()
-wd<-"F:/egfv2022/2 recherche/modélisation/fruit growth model (zhanwu)"
+wd<-"F:/egfv2022/2 recherche/modÃ©lisation/fruit growth model (zhanwu)"
 setwd(wd)
 
 ## prepare the input data ---------------------------------------------

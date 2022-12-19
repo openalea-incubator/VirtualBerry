@@ -11,7 +11,7 @@
 getwd()
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
-wd<-"F:/egfv2022/2 recherche/modélisation/fruit growth model (zhanwu)/R fruit growth model"
+wd<-"F:/egfv2022/2 recherche/modÃ©lisation/fruit growth model (zhanwu)/R fruit growth model"
 setwd(wd)
 
 #Read climate data for model inputs
