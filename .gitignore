@@ -104,3 +104,4 @@ doc/_dvlpt/
 
 *.bak
 .Rhistory
+.Rproj.user
