@@ -1,4 +1,4 @@
-
+library(deSolve)
 ## Use ode function to solve the differential equations
 
 modgrowth <- function(

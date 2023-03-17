@@ -1,0 +1,10 @@
+## growth_model_desolve.R
+Source code for fruit growth model
+## growth_command_time_allperiod_elasticity.R
+Script for input preparation, model solving, and result presentation
+## grapevine_data.txt
+Experimental measurements
+## grapevine_climat.txt
+Meteorological data
+## DATA_input.txt
+The prepared input of the model
