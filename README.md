@@ -14,7 +14,7 @@ If you have an existing R installation, R version should be <4.2 to be compatibl
 
 find the path to R by typing in a console :
 
-	R RHOME
+	R.home()
 	
 define an environment variable R_HOME pointing to this path.
 
