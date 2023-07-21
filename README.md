@@ -1,6 +1,6 @@
 # Virtual Berry
 
-Simulation of grapevine vberry growth and development
+Simulation of grapevine, virtual berry growth and development, model described in [this paper](https://github.com/openalea-incubator/VirtualBerry/blob/main/doc/2008_Dai_ActaHort.pdf)
 
 
 ## Installation from source
