@@ -3,7 +3,11 @@
 Simulation of grapevine, virtual berry growth and development, model described in [this paper](https://github.com/openalea-incubator/VirtualBerry/blob/main/doc/2008_Dai_ActaHort.pdf)
 
 
-## Installation from source
+## Installation 
+
+At first you make sure that you have installed the package manager conda in your system: follow the instructions at https://docs.conda.io/en/latest/miniconda.html
+
+Then we create a conda environment:
 
     conda create -n vberry -c conda-forge python=3.8 pytest ipython
 	conda activate vberry
