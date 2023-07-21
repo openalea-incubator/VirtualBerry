@@ -11,7 +11,9 @@ Then we create a conda environment:
 
     conda create -n vberry -c conda-forge python=3.8 pytest ipython
 	conda activate vberry
-	# skip R installation if you have an active R (check that package desolve is installed)
+ 
+If you have an active R then you can skip the R installation (check that package desolve is installed). Otherwise
+
 	conda install -c conda-forge R r-desolve
 	
 If you have an existing R installation, R version should be <4.2 to be compatible with rpy2
