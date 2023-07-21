@@ -7,7 +7,7 @@ Simulation of grapevine, virtual berry growth and development, model described i
 
     conda create -n vberry -c conda-forge python=3.8 pytest ipython
 	conda activate vberry
-	# skip R installation is you have an active R (check that package desolve is installed)
+	# skip R installation if you have an active R (check that package desolve is installed)
 	conda install -c conda-forge R r-desolve
 	
 If you have an existing R installation, R version should be <4.2 to be compatible with rpy2
