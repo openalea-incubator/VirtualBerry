@@ -16,20 +16,20 @@ If you have an active R then you can skip the R installation (check that package
 
 	conda install -c conda-forge R r-desolve
 	
-If you have an existing R installation, R version should be <4.2 to be compatible with rpy2
+Note that if you have an existing R installation, R version should be <4.2 to be compatible with rpy2.
 
-find the path to R by typing in a console :
+Find the path to R by typing in a console :
 
 	R.home()
 	
-define an environment variable R_HOME pointing to this path.
+Define an environment variable R_HOME pointing to this path.
 
-install rpy2:
+Install rpy2:
 
 	conda install -c conda-forge pandas rpy2
 	
 
-clone project and run setup:
+Clone project and run setup:
 
     git clone https://github.com/openalea-incubator/VirtualBerry.git
     cd VirtualBerry
